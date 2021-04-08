@@ -1,27 +1,24 @@
 import "./App.css";
-import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import PatientList from "./components/PatientList";
-import EditPatient from "./components/EditPatient";
-import Navigation from "./components/Navigation";
+import NavigationBar from "./components/NavigationBar";
+import MainPage from "./components/MainPage";
+import EditPage from "./components/EditPage";
 
-function App() {
+export default function App() {
   return (
     <Router>
-      <Navigation />
+      <NavigationBar />
       <Switch>
         <Route path="/" exact>
-          <PatientList />
+          <MainPage />
         </Route>
         <Route path="/add">
-          <EditPatient action="create" />
+          <EditPage action="Create" />
         </Route>
         <Route path="/update/:id">
-          <EditPatient action="update" />
+          <EditPage action="Update" />
         </Route>
       </Switch>
     </Router>
   );
 }
-
-export default App;

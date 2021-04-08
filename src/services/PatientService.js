@@ -1,27 +1,31 @@
 import axios from "axios";
 
-const API_URL =
-  "https://patients-backend.herokuapp.com/api/patients";
+// const URL = "http://localhost:8080/api";
+const URL = "https://patients-backend.herokuapp.com/api/";
 
 class PatientService {
-  getAllPatients() {
-    return axios.get(API_URL);
+  get(condition, range) {
+    return axios.get(`${URL}/get?condition=${condition}&range=${range}`);
   }
 
-  getPatientById(id) {
-    return axios.get(`${API_URL}/${id}`);
+  count(condition) {
+    return axios.get(`${URL}/count?condition=${condition}`);
   }
 
-  createPatient(patient) {
-    return axios.post(API_URL, patient);
+  read(id) {
+    return axios.get(`${URL}/read?id=${id}`);
   }
 
-  updatePatient(id, patient) {
-    return axios.put(`${API_URL}/${id}`, patient);
+  create(patient) {
+    return axios.post(`${URL}/create`, patient);
   }
 
-  deletePatient(id) {
-    return axios.delete(`${API_URL}/${id}`);
+  update(id, patient) {
+    return axios.put(`${URL}/update?id=${id}`, patient);
+  }
+
+  delete(id) {
+    return axios.delete(`${URL}/delete?id=${id}`);
   }
 }
 
