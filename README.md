@@ -1,8 +1,8 @@
 # Patients Manager
 
-Frontend: [Source Code](https://github.com/metoonhathung/patient-web) - [Live Demo](https://patient-web.pages.dev)
+Frontend: [Source Code](https://github.com/metoonhathung/patient-web) - [Demo](https://patient-web.pages.dev)
 
-Backend: [Source Code](https://github.com/metoonhathung/patient-service) - [Live Demo](https://metoonhathung-patient-service.herokuapp.com/patients)
+Backend: [Source Code](https://github.com/metoonhathung/patient-service) - [Demo](https://metoonhathung-patient-service.herokuapp.com/patients)
 
 Description: A fullstack web application to manage patients.
 
